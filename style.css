@@ -1,8 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 /* Include the padding and border in an element's total width and height */
-* {
+/* * {
     box-sizing: border-box;
+  } */
+body{
+    margin: 0;
+    padding: 0; 
+    font-family: 'Roboto', sans-serif;
+}
+  header{
+    width: 100%;
   }
-  
+  header nav{
+      width: 90%;
+      max-width: 1000px;
+      margin: 20px auto; 
+      background: #41E696;
+  }
+  .menu-bar{
+      display: none;
+  }
+  header nav dl{
+      overflow: hidden;
+      list-style: none;
+  }
+  header nav dl dt {
+      float: left;
+  }
+  header nav dl dt a {
+    color: #fff; 
+    padding: 20px; 
+    display: block;
+    text-decoration: none; 
+}
+header nav dl dt a:hover {
+    background: #53CA98; 
+}
   /* Remove margins and padding from the list */
   ul {
     margin: 0;
@@ -71,9 +104,9 @@
   
   /* Style the header */
   .header {
-    background-color: #116611;
+    background-color: #C8C8C8;
     padding: 30px 40px;
-    color: white;
+    color: #000000;
     text-align: center;
   }
   
@@ -85,11 +118,21 @@
   }
   
   /* Style the input */
-  input {
-    margin: 0;
+  .tarea {
+    margin-bottom: 5px;
     border: none;
     border-radius: 0;
-    width: 75%;
+    width: 100%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+  .persona {
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 0;
+    width: 100%;
     padding: 10px;
     float: left;
     font-size: 16px;
@@ -99,9 +142,9 @@
   /* Style the "Add" button */
   .addBtn {
     padding: 10px;
-    width: 15%;
-    background: #d9d9d9;
-    color: #555;
+    width: 50%;
+    background: #ED7364;
+    color: #000000;
     float: right;
     text-align: center;
     font-size: 16px;
@@ -114,3 +157,39 @@
   .addBtn:hover {
     background-color: #bbb;
   }
+
+@media screen and (max-width: 800px){
+    header nav{
+        width: 80%;
+        height: 23%;
+        left: -100%;
+        margin: 0; 
+        position: fixed;  
+    }
+    header nav dl dt {
+        display: block;
+        float: none;
+        border-bottom: 1px solid rgba(255,255,255, .3)
+    }
+    .menu-bar{
+        display: block; 
+        width: 100%;
+        background: #ccc;
+    }
+    .menu-bar .btn-menu{
+        display: block;
+        padding: 20px; 
+        background: #41E696;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold; 
+        font-size: 25px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box; 
+    }
+    .menu-bar span {
+        float: right; 
+        font-size: 40px; 
+    }
+}

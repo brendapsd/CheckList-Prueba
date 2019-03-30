@@ -1,3 +1,6 @@
+// const btnIngresar = document.getElementById('btn-ingresar'); 
+// btnIngresar.addEventListener('click', )
+
 // Create a "close" button and append it to each list item
 const myNodelist = document.getElementsByTagName("LI");
 var i;
@@ -31,15 +34,18 @@ list.addEventListener('click', (ev) => {
 const newElement = () => {
   const li = document.createElement("li");
   const inputValue = document.getElementById("myInput").value;
-  const t = document.createTextNode(inputValue);
+  const inputValue1 = document.getElementById("myInput1").value;
+  const t = document.createTextNode(`${inputValue} - ${inputValue1}`);
   li.appendChild(t);
   if (inputValue === '') {
-    alert("Es muy necesario que ingrese una tarea a realizar.");
+    alert("Es muy necesario que ingrese una tarea a realizar");
+  } else if (inputValue1==='') {
+    alert("Asigna a una persona para que la realicé");
   } else {
     document.getElementById("myUL").appendChild(li);
   }
   document.getElementById("myInput").value = "";
-
+  document.getElementById("myInput1").value = "";
   const span = document.createElement("SPAN");
   const txt = document.createTextNode("\u00D7");
   span.className = "close";
