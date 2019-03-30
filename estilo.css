@@ -20,9 +20,9 @@ body {
     padding-top: 8rem;
     padding-bottom: 8rem;
   }
-  /* .img{
+  .img{
     background: url("./img/igualdad1.jpg");
-  } */
+  }
   
   header.masthead .overlay {
     position: absolute;
